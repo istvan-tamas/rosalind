@@ -2,13 +2,13 @@
 
 int recurrence(int n, int k){
 
-    int result = 1;
 
-    for(int i = 0; i <= n; i++){
-        result = result + k;
+    if(n <= 1){
+        return n;
     }
 
-    return result;
+    return recurrence(n , (k - 1)) + recurrence(n , (k - 2));
+
 }
 
 
